@@ -37,6 +37,7 @@ DSA-Brushup-MACS/
 
 To empirically verify our theoretical time complexities, we benchmarked our algorithms by scaling the input array from N = 1,000 to N = 10,000 (a 10x increase). 
 
+```
   ALGORITHM TIER :     GROWTH FACTOR            THEORETICAL BOUND VERIFIED 
 Merge & Quick Sort    ~13.5x work         O(N log N)  -> Master's Theorem
 Bubble & Selection    100.0x work         O(N²)       -> Polynomial Growth
@@ -45,6 +46,7 @@ Binary Search         +3 steps total      O(log N)    -> Logarithmic Halving
 BFS, DFS, Dijkstra    Strictly V+E        O(V+E)      -> Graph Traversal
 Note: A 10x increase in array size caused Bubble Sort to do 100x more work, 
 perfectly demonstrating the fatal scaling of O(N²) compared to O(N log N).
+```
 
 **Explained in words:**
 
