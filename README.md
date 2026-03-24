@@ -1,1 +1,1 @@
-sorrry forr delayy, i am down with fever tih speed slow ho gyi hai , i have the files 85% ready , i'll push them before the sun rises
+sorrry forr delayy, i am down with fever toh speed slow ho gyi hai , i have the files 85% ready , i'll push them before the sun rises
