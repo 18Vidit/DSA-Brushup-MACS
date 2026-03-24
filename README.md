@@ -1,44 +1,52 @@
-DSA-Brushup-MACS 
+**DSA-Brushup-MACS**
 
 A comprehensive C++ repository designed for brushing up on Abstract Data Structures and profiling core Algorithms. Built as a hands-on refresher for midterms and algorithmic problem-solving.
 
-Objective
+**Objective:**
 To implement, test, and benchmark standard Data Structures (via C++ STL) alongside fundamental sorting, searching, and graph algorithms. This project includes a central benchmarking tool (`main.cpp`) to verify theoretical time complexities (such as Master's Theorem) by tracking real-world execution time and iteration counts across various input sizes.
 
-Repository Structure:
+**Repository Structure:**
 
+```
 DSA-Brushup-MACS/
-│
-├── main.cpp                              # The main runner, profiler, & tester
-│
-├── data_structures/                      # STL & Custom CRUD operations
-│   ├── LinearStructures.hpp              # Arrays, Vectors, Strings, Singly/Doubly Lists
-│   ├── Maps.hpp                          # Unordered Map (Hash), Map (Tree)
-│   └── CustomStructures.hpp              # Trees, Graphs, Circular LL
-│
-└── algorithms/                           
+├── main.cpp                  # The main runner, profiler, & tester
+├── data_structures/          # STL & Custom CRUD operations
+│   ├── LinearStructures.hpp  # Arrays, Vectors, Strings, Singly/Doubly Lists
+│   ├── Maps.hpp              # Unordered Map (Hash), Map (Tree)
+│   └── CustomStructures.hpp  # Trees, Graphs, Circular LL
+└── algorithms/
     ├── sorting/
-    │   ├── BubbleSort.hpp                # Standard iterative
-    │   ├── RecursiveBubble.hpp           
+    │   ├── BubbleSort.hpp    # Standard iterative
+    │   ├── RecursiveBubble.hpp
     │   ├── SelectionSort.hpp
-    │   ├── InsertionSort.hpp             # Standard iterative
+    │   ├── InsertionSort.hpp # Standard iterative
     │   ├── RecursiveInsertion.hpp
-    │   ├── MergeSort.hpp                 # O(N log N)
-    │   └── QuickSort.hpp                 # O(N log N)
-    │
+    │   ├── MergeSort.hpp     # O(N log N)
+    │   └── QuickSort.hpp     # O(N log N)
     ├── searching/
-    │   ├── LinearSearch.hpp              # O(N) baseline
-    │   ├── BinarySearch.hpp              # Iterative & Recursive versions
-    │   ├── BFS.hpp                       # Breadth-First Search
-    │   └── DFS.hpp                       # Depth-First Search
-    │
+    │   ├── LinearSearch.hpp  # O(N) baseline
+    │   ├── BinarySearch.hpp  # Iterative & Recursive versions
+    │   ├── BFS.hpp           # Breadth-First Search
+    │   └── DFS.hpp           # Depth-First Search
     └── extras/
-        ├── Dijkstra.hpp                  # Shortest path via Priority Queue/Min-Heap
-        └── Kadane.hpp                    # Maximum subarray sum in O(N)
+        ├── Dijkstra.hpp      # Shortest path via Priority Queue/Min-Heap
+        └── Kadane.hpp        # Maximum subarray sum in O(N)
+```
      
-Performance Analysis
+**Performance Analysis:**
 
 To empirically verify our theoretical time complexities, we benchmarked our algorithms by scaling the input array from N = 1,000 to N = 10,000 (a 10x increase). 
+
+  ALGORITHM TIER :     GROWTH FACTOR            THEORETICAL BOUND VERIFIED 
+Merge & Quick Sort    ~13.5x work         O(N log N)  -> Master's Theorem
+Bubble & Selection    100.0x work         O(N²)       -> Polynomial Growth
+Kadane & Linear       10.0x  work         O(N)        -> Linear Bound
+Binary Search         +3 steps total      O(log N)    -> Logarithmic Halving
+BFS, DFS, Dijkstra    Strictly V+E        O(V+E)      -> Graph Traversal
+Note: A 10x increase in array size caused Bubble Sort to do 100x more work, 
+perfectly demonstrating the fatal scaling of O(N²) compared to O(N log N).
+
+**Explained in words:**
 
 The Divide & Conquer ALgos: O(N log N)
 Verified via the Master's Theorem
